@@ -14,7 +14,12 @@
 			listContainer: $('.item-list'),
 			itemEdit: $('.item-list')
 		};
-		self.renderList(model.data);
+       return {
+		 renderList: function(){
+			 self.renderList(model.data);
+		 } 
+	  };
+		 
 	};
 	
 	self.renderList = function (data){
@@ -22,6 +27,6 @@
 		self.elements.listContainer.html(list);
 	};
 	
-	init();
+    init();
   }
 );

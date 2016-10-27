@@ -13,7 +13,12 @@ function Model(data){
 	  
 	  self.data.push(item);
 	  
-	  return self.data;
+	  return {
+		 addItem: function(){
+			// model.data;
+			self.data;
+		 } 
+	  }; 
   };
   
   self.removeItem = function (item) {
@@ -25,7 +30,12 @@ function Model(data){
 
     self.data.splice(index, 1);
     
-    return self.data;	
+	  return {
+		 removeItem: function(){
+			 //model.data;
+			 self.data;
+		 } 
+	  }; 	
   };
 }
 );

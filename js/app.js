@@ -18,6 +18,9 @@ require (
 	'jquery'
 	],
 	function (model, view, controller, jq, jquery){
+		model.addItem();
+		model.removeItem();	
+		view.renderList();
 		Model();
 		View();
 		Controller();
