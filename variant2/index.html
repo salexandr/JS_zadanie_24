@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+ <html lang="ru">
+ <head>
+     <meta charset=utf-8>
+     <title>Домашнее задание Java Script №23-24</title>
+     <link rel="stylesheet" href="css/style.css">
+	 <link rel="stylesheet" href="css/reset.css">	 
+     <!--<script src="https://code.jquery.com/jquery-1.12.4.js"></script>-->
+     <script src="js/tmpl.js"></script>	 
+	 <script data-main="js/app" src="js/require.js"></script>	
+ </head>
+ <body>
+ 
+     <script type="text/template" id="wrapper-template">
+	 
+     <div class = "wrapper">
+	     <div class="notepad">
+		     <h2 class="title">Список дел</h2>
+	         <ul class="item-list"></ul>
+		     <div class="controlls">
+		         <input type="text" class="item-value">
+			     <button class="item-add">Добавить</button>
+		     </div>
+		 </div>
+	 </div>	 
+	 
+	 </script>
+	 <script type="text/template" id="list-template">
+	     <% for (var i = 0; i < data.length; i++) { %>
+			 <li class="item__link"><span class="text"><%= data[i] %></span><button data-value="<%= data[i]%>" class="item-delete"> x</button><button data-r="<%= data[i]%>" class="item-edit"> (редактировать)</button></li>		 
+	     <% }; %>	 
+	 
+	 </script>
+
+   <!--<script src="js/script.js"></script>-->
+ </body>
+ </html>

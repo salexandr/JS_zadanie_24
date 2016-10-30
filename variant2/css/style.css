@@ -1,0 +1,53 @@
+﻿body {
+	background-color: #feffa8;
+}
+
+.wrapper {
+	position: relative;
+}
+
+.notepad {
+	display: inline-block;
+	padding: 20px;
+    margin-top: 140px;
+	margin-left: 40%;
+	background-color: #f9f9e2;
+    border: 3px solid #9c9b44;
+    border-radius: 10px;
+    text-align: center;	
+}
+
+.title {
+	color: black;
+	font-size: 18px;
+	font-weight: bold;
+	font-family: Alert, sans-serif;
+	margin-bottom: 10px;
+}
+
+.item-list {
+
+	margin-bottom: 10px;	
+}
+
+.text {
+    float: left;
+	font-size: 16px;
+	font-family: Alert, sans-serif;	
+}
+
+.item__link {
+
+}
+
+.item-delete {
+
+}
+
+.conteiner-button {
+
+}
+
+.item-edit {
+		float: right;	
+}
