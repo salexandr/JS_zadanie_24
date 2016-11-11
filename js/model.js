@@ -1,8 +1,11 @@
-﻿define (
-  'model',
-  [],
-function Model(data){
-    var self = this;
+﻿define(
+    'modeljs',
+	['viewjs', 'controllerjs', 'jquery'],
+    function() {
+		
+    return {
+    Model:function (data){
+  var self = this;
   
   self.data = data;
   
@@ -13,12 +16,7 @@ function Model(data){
 	  
 	  self.data.push(item);
 	  
-	  return {
-		 addItem: function(){
-			// model.data;
-			self.data;
-		 } 
-	  }; 
+	  return self.data;
   };
   
   self.removeItem = function (item) {
@@ -30,13 +28,9 @@ function Model(data){
 
     self.data.splice(index, 1);
     
-	  return {
-		 removeItem: function(){
-			 //model.data;
-			 self.data;
-		 } 
-	  }; 	
+    return self.data;	
   };
 }
+    }
 );
 

@@ -9,20 +9,25 @@
 	}
 });
 
-require (
-	[
-	'model',
-	'view',
-	'controller',
-	'jq',
-	'jquery'
-	],
-	function (model, view, controller, jq, jquery){
-		model.addItem();
-		model.removeItem();	
-		view.renderList();
-		Model();
-		View();
-		Controller();
-	}
+require(
+    [   
+        'modeljs',
+        'viewjs',
+        'controllerjs',
+		'jquery',
+		'tmpl'
+    ],
+    function(modeljs, viewjs, controllerjs, tmpl, $){
+		
+    viewjs.View();
+	modeljs.Model();
+	
+	$(function (){
+	var firstToDoList = ['test 1', 'test 2', 'test 3'];
+	var model = new Model(firstToDoList);
+	var view = new View(model);
+	var controller = new Controller(model, view);
+});    
+
+    }
 );

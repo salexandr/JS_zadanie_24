@@ -1,7 +1,10 @@
-﻿define (
-  'controller',
-  ['model', 'view'],
-function Controller(model, view){
+﻿define(
+    'controllerjs',
+    ['modeljs', 'viewjs', 'jquery'],
+    function() {
+
+	return {
+ controller:function Controller(model, view){
 	var self = this;
 	
 	view.elements.addBtn.on('click', addItem);
@@ -28,5 +31,8 @@ function Controller(model, view){
 		model.removeItem(item);
 		view.renderList(model.data);
 	}
-  }
+	
+}
+	};
+    }
 );

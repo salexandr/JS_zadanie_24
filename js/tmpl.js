@@ -1,4 +1,8 @@
-﻿
+﻿define(
+    'tmpl',
+	[],
+    function () {
+		
 (function(){
   var cache = {};
 
@@ -32,3 +36,5 @@
     return data ? fn( data ) : fn;
   };
 })();
+	}
+	);

@@ -1,7 +1,11 @@
-﻿define (
-  'view',
-  ['model', 'jquery'],
-  function View(model){
+﻿define(
+    'viewjs',
+	['modeljs', 'jquery', 'tmpl'],
+    function (modeljs, $) {
+		
+		
+    return {
+    View:function (model){
 	var self = this;
 	
 	function init(){
@@ -14,12 +18,7 @@
 			listContainer: $('.item-list'),
 			itemEdit: $('.item-list')
 		};
-       return {
-		 renderList: function(){
-			 self.renderList(model.data);
-		 } 
-	  };
-		 
+		self.renderList(model.data);
 	};
 	
 	self.renderList = function (data){
@@ -27,6 +26,8 @@
 		self.elements.listContainer.html(list);
 	};
 	
-    init();
-  }
+	init();
+    }
+   };
+    }
 );
